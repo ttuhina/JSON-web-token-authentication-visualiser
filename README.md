@@ -3,6 +3,8 @@
 ## Project Objective
 The original task was to add JSON Web Token (JWT) authentication to an existing RESTful API, ensure secure handling of tokens, and implement a protected route. This project expands on that objective by creating an interactive, visually appealing frontend to demonstrate JWT authentication in action.
 
+![Working video](https://github.com/ttuhina/JSON-web-token-authentication-visualiser/blob/main/secure%20access%20portal.mp4)
+
 ## Project Overview
 This project implements a secure authentication system using JSON Web Tokens (JWT) with a RESTful API backend and an interactive frontend. It visualizes the JWT as a 3D digital access card, providing a unique and engaging way to understand token-based authentication.
 

@@ -1,3 +1,6 @@
+Here's your updated code with JWT support using the standard `Bearer` token format:
+
+```javascript
 let token = null;
 let countdownInterval = null;
 
@@ -51,8 +54,8 @@ function updateTokenVisual() {
   const tokenInfo = document.getElementById('token-info');
   tokenInfo.textContent = `Token: ${token.substr(0, 20)}...`;
 
-  // Start countdown
-  let timeLeft = 3600; // 1 hour in seconds
+  let timeLeft = 3600;
+  clearInterval(countdownInterval);
   countdownInterval = setInterval(() => {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
@@ -74,7 +77,7 @@ document.getElementById('access-protected').addEventListener('click', async () =
 
   try {
     const response = await fetch('http://localhost:3000/protected', {
-      headers: { 'Authorization': token }
+      headers: { 'Authorization': `Bearer ${token}` }
     });
 
     if (response.ok) {
@@ -99,3 +102,4 @@ function animateTokenUsage() {
     }, 100);
   }, 100);
 }
+```
